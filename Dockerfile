@@ -100,3 +100,5 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update
 RUN apt-get install -y openssl libpq-dev build-essential libcurl4-openssl-dev software-properties-common
 
+RUN gem install bundler
+
