@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV MIRROR="mirrors.ocf.berkeley.edu"
+ENV MIRROR="mirror.yandex.ru"
 
 RUN sed -i "s|deb.debian.org|$MIRROR|g" /etc/apt/sources.list \
   && apt-get update \
@@ -37,9 +37,9 @@ RUN mkdir -p /usr/local/etc \
   } >> /usr/local/etc/gemrc
 
 ENV RUBY_MAJOR 2.6
-ENV RUBY_VERSION 2.6.2
-ENV RUBY_DOWNLOAD_SHA256 a0405d2bf2c2d2f332033b70dff354d224a864ab0edd462b7a413420453b49ab
-ENV RUBYGEMS_VERSION 2.7.7
+ENV RUBY_VERSION 2.6.3
+ENV RUBY_DOWNLOAD_SHA256 577fd3795f22b8d91c1d4e6733637b0394d4082db659fccf224c774a2b1c82fb
+ENV RUBYGEMS_VERSION 3.0.3
 
 # some of ruby's build scripts are written in ruby
 # we purge this later to make sure our final image uses what we just built
